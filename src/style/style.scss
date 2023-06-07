@@ -3,7 +3,8 @@ html, body, header, main, footer{
     
 }
 @import url(_header.scss);
-
+@import url(_presentation.scss);
+@import url(_expertise.scss);
 a{
     text-decoration: none;
     color: black;
@@ -13,33 +14,4 @@ a{
     position: relative;
     // left: 10rem;
     bottom: 1rem;
-}
-
-.main-presentation{
-    display: flex;
-    align-items: center;
-    font-size: 3rem;
-    justify-content: space-evenly;
-
-}
-
-.column{
-    display: flex;
-    flex-direction: column;
-    
-}
-.presentation-item{
-    margin: 30px;
-}
-
-.presentation-left{
-    width: 50%;
-}
-
-.img-contact{
-    width: 5rem;
-    margin-right: 2rem;
-}
-.contact-wrapper{
-    display: flex;
 }
