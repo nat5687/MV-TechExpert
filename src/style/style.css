@@ -31,4 +31,13 @@ a {
   width: 50%;
 }
 
+.img-contact {
+  width: 5rem;
+  margin-right: 2rem;
+}
+
+.contact-wrapper {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */
