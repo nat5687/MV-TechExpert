@@ -1,16 +1,6 @@
+@import url(_header.scss);
 html, body, header, main, footer {
   position: relative;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
 }
 
 a {
@@ -21,8 +11,24 @@ a {
   bottom: 1rem;
 }
 
-.MV-img {
-  margin-left: 1rem;
+.main-presentation {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  justify-content: space-evenly;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation-item {
+  margin: 30px;
+}
+
+.presentation-left {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
