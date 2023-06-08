@@ -4,22 +4,10 @@
     align-items: center;
     font-size: 3rem;
     justify-content: space-evenly;
-
-}
-
-.column{
-    display: flex;
     flex-direction: column;
-    
+
 }
+
 .presentation-item{
     margin: 30px;
-}
-
-.img-contact{
-    width: 5rem;
-    margin-right: 2rem;
-}
-.contact-wrapper{
-    display: flex;
 }
