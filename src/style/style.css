@@ -1,6 +1,7 @@
 @import url(_header.scss);
 @import url(_presentation.scss);
 @import url(_expertise.scss);
+@import url(_carousel.scss);
 html, body, header, main, footer {
   position: relative;
 }
