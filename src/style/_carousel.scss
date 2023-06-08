@@ -2,22 +2,62 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+
     
+}
+.carousel{
+    margin-top: 5rem;
 }
 .carousel-header{
     font-size: 2rem;
     padding-left: 4em;
     padding-right: 4em;
 }
+
 .carousel-title{
     margin: 2rem;
 }
+
 .carousel-main{
+
     display: flex;
     justify-content: space-evenly;
+    width: 75vw;
 }
+
 .carousel-main-item{
     display: flex;
+    width: 20%;
+    flex-grow: 1;
     flex-direction: column;
-    align-items: center;
+    background-color: rgb(211, 210, 210);
+    margin: 1rem;
+}
+.carousel-main-item-header{
+    padding: 1em;
+    font-size: 1.5rem;
+    background-color: rgb(73, 69, 69);
+}
+.carousel-main-item-ul{
+    font-size: 1rem;
+    padding-bottom: auto;
+
+    color: black;
+}
+
+.carousel-footer{
+    margin-top: 2rem;
+    color: rgb(73, 69, 69);
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.carousel-footer-item{
+    border: solid blue;
+    padding: 1em;
+    border-radius: 60%;
+    :nth-child(6){
+        border: solid black;
+    }
 }
