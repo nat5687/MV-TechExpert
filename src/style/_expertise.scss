@@ -20,6 +20,9 @@
 .projet{
     display: flex;
     margin: 2rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: white;
 }
 .projet1{
     background-color: rgb(91, 155, 213);
@@ -32,4 +35,17 @@
 }
 .projet4{
     background-color: rgb(112, 173, 71);
+}
+
+.experience{
+    border: solid  rgb(91, 155, 213);
+    border-radius: 30px
+}
+
+.header-expertise-item{
+    padding: 0.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border: 0.5rem solid  rgb(91, 155, 213);
+    border-radius: 1em
 }
