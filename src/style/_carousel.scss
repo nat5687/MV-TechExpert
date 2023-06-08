@@ -12,3 +12,12 @@
 .carousel-title{
     margin: 2rem;
 }
+.carousel-main{
+    display: flex;
+    justify-content: space-evenly;
+}
+.carousel-main-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
