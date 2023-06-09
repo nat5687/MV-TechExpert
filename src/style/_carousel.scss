@@ -11,8 +11,11 @@
 }
 .carousel-header{
     font-size: 2rem;
+    padding: 1rem;
     padding-left: 4em;
     padding-right: 4em;
+    display: flex;
+    justify-content: space-between!important;
 }
 
 .carousel-title{
@@ -57,7 +60,10 @@
     border: solid blue;
     padding: 1em;
     border-radius: 60%;
-    :nth-child(6){
-        border: solid black;
-    }
+}
+
+.carousel-img{
+    width: 10rem;
+    height: 8rem;
+    margin-right: 2rem;
 }

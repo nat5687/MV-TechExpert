@@ -6,6 +6,7 @@
 .expertise-wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-size: 2rem;
 }
@@ -19,6 +20,7 @@
 }
 .projet{
     display: flex;
+    align-items: center;
     margin: 2rem;
     padding-left: 1em;
     padding-right: 1em;
@@ -49,4 +51,9 @@
     padding-right: 3em;
     border: 0.5rem solid  rgb(91, 155, 213);
     border-radius: 1em
+}
+.img-projet{
+    width: 10rem;
+    height: 8rem;
+    margin-right: 2rem;
 }
