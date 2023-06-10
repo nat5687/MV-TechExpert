@@ -3,6 +3,9 @@ interface Options {
     slidesVisible: number
     loop: boolean
 }
+interface CallBack {
+    (index: number): void 
+}
 
 class Carousel {
     element: HTMLElement
@@ -11,6 +14,8 @@ class Carousel {
     container: HTMLElement
     root: HTMLElement
     currentItem: number
+    moveCallBacks: CallBack[]
+    isMobile: boolean
 
 
     constructor(element: HTMLElement, options = {}) {
@@ -21,9 +26,14 @@ class Carousel {
             loop: false
         }, options)
         let children = [].slice.call(element.children)
+        this.moveCallBacks = []
         this.currentItem = 0
+
+        // Modification du DOM
         this.root = this.createDivWithClass('carousel')
+        this.isMobile = false
         this.container = this.createDivWithClass('carousel__container')
+        this.root.setAttribute('tabIndex', 0)
         this.root.appendChild(this.container)
         this.element.appendChild(this.root)
         this.items = children.map((child: HTMLElement) => {
@@ -35,12 +45,25 @@ class Carousel {
         this.setStyle()
         this.createNavigation()
 
+        // Events
+        this.moveCallBacks.forEach(cb => cb(0))
+        this.onWindowResize()
+        window.addEventListener('resize', this.onWindowResize.bind(this))
+        this.root.addEventListener('keyup', e => {
+            if(e.key === 'ArrowRight' || e.key === 'Right'){
+                this.next()
+            } else if(e.key === 'ArrowLeft' || e.key === 'Left'){
+                this.prev()
+            }
+        })
+
+
     }
 
     setStyle () {
-            let ratio: number = this.items.length / this.options.slidesVisible
+            let ratio: number = this.items.length / this.slidesVisible
             this.container.style.width = (ratio * 100) + '%'
-            this.items.forEach( item => {item.style.width = ((100 / this.options.slidesVisible) / ratio) + '%' })
+            this.items.forEach( item => {item.style.width = ((100 / this.slidesVisible) / ratio) + '%' })
     }
 
 
@@ -51,28 +74,68 @@ class Carousel {
         this.root.appendChild(prevButton)
         nextButton.addEventListener('click', this.next.bind(this))
         prevButton.addEventListener('click', this.prev.bind(this))
+        if (this.options.loop === true){
+            return
+        }
+        this.onMove( (index: number): void => {
+            if (index === 0) {
+                prevButton.classList.add('carousel__prev--hidden')
+            } else {
+                prevButton.classList.remove('carousel__prev--hidden')
+            }
+            if ( (this.items[this.currentItem + this.slidesVisible] === undefined )) {
+                nextButton.classList.add('carousel__next--hidden')
+            } else {
+                nextButton.classList.remove('carousel__next--hidden')
+
+            }
+        })
 
 
     }
 
     next () {
-        this.goToItem(this.currentItem + this.options.slidesToScroll)
+        this.goToItem(this.currentItem + this.slidesToScroll)
     }
 
     prev () {
-        this.goToItem(this.currentItem - this.options.slidesToScroll)
+        this.goToItem(this.currentItem - this.slidesToScroll)
     }
 
     goToItem (index: number) {
         if (index < 0 ) {
-            index = this.items.length - this.options.slidesVisible
-        } else if (index >= this.items.length || (this.items[this.currentItem + this.options.slidesVisible] === undefined && index > this.currentItem)){
-            index = 0
+            if (this.options.loop){
+                index = this.items.length - this.options.slidesVisible
+            } else {
+                return 
+            }
+        } else if (index >= this.items.length || (this.items[this.currentItem + this.slidesVisible] === undefined && index > this.currentItem)){
+            if (this.options.loop) {
+                index = 0
+            } else {
+                return 
+            }
         }
+        
         let translateX = index * -100 /  this.items.length
         this.container.style.transform = `translate3D(${translateX}%, 0, 0)`
         this.currentItem = index
-        debugger
+        this.moveCallBacks.forEach(cb => cb(index))
+    }
+
+    onMove(cb: CallBack){
+        this.moveCallBacks.push(cb)
+
+    }
+
+    onWindowResize(){
+        let mobile = window.innerWidth < 800
+        if (mobile !== this.isMobile){
+            this.isMobile = mobile
+            this.setStyle
+            this.moveCallBacks.forEach(cb => cb(this.currentItem))
+
+        }
     }
 
 
@@ -81,14 +144,20 @@ class Carousel {
         div.setAttribute('class', className)
         return div
     }
+
+    get slidesToScroll(): number{
+        return (this.isMobile ? 1 :  this.options.slidesToScroll)
+    }
+
+    get slidesVisible(): number {
+        return (this.isMobile ? 1 :  this.options.slidesVisible)
+    }
 }
 
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    new Carousel(document.querySelector('.carousel-wrapper') as HTMLElement)
-
-
+    const carousel = new Carousel(document.querySelector('.carousel-wrapper') as HTMLElement)
 })
 
