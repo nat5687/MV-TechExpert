@@ -72,8 +72,8 @@ export class Carousel {
         let prevButton = this.createDivWithClass('carousel__prev')
         this.root.appendChild(nextButton)
         this.root.appendChild(prevButton)
-        nextButton.addEventListener('click', this.next.bind(this))
-        prevButton.addEventListener('click', this.prev.bind(this))
+        nextButton.addEventListener('click', this.next.bind(this, 1))
+        prevButton.addEventListener('click', this.prev.bind(this, 1))
         if (this.options.loop === true){
             return
         }
@@ -94,12 +94,12 @@ export class Carousel {
 
     }
 
-    next () {
-        this.goToItem(this.currentItem + this.slidesToScroll)
+    next (n = 1) {
+        this.goToItem(this.currentItem + this.slidesToScroll * n)
     }
 
-    prev () {
-        this.goToItem(this.currentItem - this.slidesToScroll)
+    prev (n = 1) {
+        this.goToItem(this.currentItem - this.slidesToScroll * n)
     }
 
     goToItem (index: number) {
