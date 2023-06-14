@@ -56,8 +56,6 @@ export class Carousel {
                 this.prev()
             }
         })
-
-
     }
 
     setStyle () {

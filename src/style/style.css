@@ -5,7 +5,9 @@
 html, body, header, main, footer {
   position: relative;
 }
-
+body{
+  overflow-x: hidden !important;
+}
 main {
   display: flex;
   flex-direction: column;
