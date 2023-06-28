@@ -1,3 +1,5 @@
+/*
+
 .realisation-wrapper{
     display: flex;
     flex-direction: column;
@@ -28,4 +30,26 @@
 
 .realisation-item-wrapper{
     width: 30%;
+}
+*/
+.h1-realisation{
+    font-size: 3rem;
+    text-align: center;
+}
+.img-realisation {
+    height: 4rem;
+}
+
+.realisation-header{
+    display: flex;
+    justify-content: space-around;
+}
+.realisation-content{
+    display: flex;
+    width: 85vw;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: -1.7rem;
 }
