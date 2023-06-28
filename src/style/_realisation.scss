@@ -1,5 +1,31 @@
 .realisation-wrapper{
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
+    justify-content: space-evenly;
+    margin: 3rem;
+} 
+ .img-realisation {
+    height: 4rem;
+}
+.realisation-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+.h1-realisation{
+    font-size: 3rem;
+}
+.realisation-item1 :nth-child(1) {
+    font-size: 0.7em;
+    font-weight: normal;
+
+}
+
+.realisation-item-wrapper{
+    width: 30%;
 }
