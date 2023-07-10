@@ -335,31 +335,35 @@
       <section class="contact-wrapper" id="contact">
         <h1 class="h1-contact">Contact</h1>
         <form class="form" action="https://formspree.io/f/xnqkqbzd" method="POST">
-          <div class="prenom-wrapper">
-            <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+          <div class="fromwrapper">
+            <div class="flex-left-contact">
+              <div class="prenom-wrapper left-form-item">
+                <input class="left-form-item-input" type="text" id="prenom" name="Prénom:" placeholder="Prénom" required>
+              </div>
+    
+              <div class="nom-wrapper left-form-item">
+                <input class="left-form-item-input" type="text" id="nom" name="Nom:" placeholder="Nom" required>
+              </div>
+    
+              <div class="societe-wrapper left-form-item">
+                  <input class="left-form-item-input" type="text" id="societe" name="Société:" placeholder="Société" required>
+              </div> 
+    
+              <div class="email-wrapper left-form-item">
+                <input class="left-form-item-input" type="text" id="email" name="E-mail:" placeholder="E-mail" required>
+              </div>
+    
+              <div class="telephone-wrapper left-form-item">
+                <input class="left-form-item-input" type="text" id="telephone" name="Téléphone:" placeholder="Téléphone" required>
+              </div>
+            </div>
+            <div class="text-wrapper">
+            <textarea class="text-item" id="text" name="Message:" placeholder="Rédiger votre message ici" required></textarea>
+            </div>
           </div>
 
-          <div class="nom-wrapper">
-            <input type="text" id="nom" name="nom" placeholder="Nom" required>
-          </div>
 
-          <div class="societe-wrapper">
-              <input type="text" id="societe" name="societe" placeholder="Société" required>
-          </div> 
-
-          <div class="email-wrapper">
-            <input type="text" id="email" name="email" placeholder="E-mail" required>
-          </div>
-
-          <div class="telephone-wrapper">
-            <input type="text" id="telephone" name="telephone" placeholder="Téléphone" required>
-          </div>
-
-          <div class="text-wrapper">
-          <textarea id="text" name="message" placeholder="Rédiger votre message ici" required></textarea>
-          </div>
-
-          <div >
+          <div class="submit-wrapper">
             <button class="submit">Envoyer</button>
           </div>
         </form>
