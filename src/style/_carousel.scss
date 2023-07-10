@@ -4,7 +4,6 @@
     align-items: center;
     color: white;
 
-    
 }
 
 .carousel-item{
@@ -104,7 +103,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #ffffff url(../../public/svgs/right-arrow.svg) center center no-repeat;
+    background: #ffffff url(../../svgs/right-arrow.svg) center center no-repeat;
     background-size: 20px 20px;
     border-radius: 50%;
     top: 50%;
@@ -120,7 +119,7 @@
 }
 .carousel__prev{
     right: auto;
-    background-image: url(../../public/svgs/left-arrow.svg);
+    background-image: url(../../svgs/left-arrow.svg);
 }
 
 .carousel__prev--hidden, .carousel__next--hidden{

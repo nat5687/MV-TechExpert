@@ -43,6 +43,7 @@
 .realisation-header{
     display: flex;
     justify-content: space-around;
+    margin-top: 3rem;
 }
 .realisation-content{
     display: flex;
@@ -52,4 +53,8 @@
     text-align: center;
     position: relative;
     left: -1.7rem;
+}
+
+.realisation-wrapper{
+    margin: 4rem;
 }

@@ -1,0 +1,47 @@
+.h1-contact{
+    font-size: 3rem;
+}
+.contact-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > div > input {
+    width: 50%;
+    height: 3rem;
+}
+
+form > div > textarea {
+    height: 3rem;
+    width: 50%;
+}
+
+.submit{
+    margin: 2em;
+    font-size: 1rem;
+    width: 30%;
+    padding: 1em 0em 1em 0em;
+    background-color: rgba(22, 43, 111, 1);
+    cursor: pointer;
+    color: white;
+}
+
+.submit:hover{
+    background-color: rgba(22, 43, 111, 0.6);
+} 

@@ -3,8 +3,10 @@
 @import url(_expertise.scss);
 @import url(_carousel.scss);
 @import url(_realisation.scss);
+@import url(_contact.scss);
 html, body, header, main, footer {
   position: relative;
+  overflow-x: hidden;
 }
 
 main {

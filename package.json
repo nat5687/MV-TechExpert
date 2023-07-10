@@ -9,11 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
+    "typescript": "^5.1.6",
     "vite": "^4.3.9"
   },
   "dependencies": {
-    "@magne4000/vite-plugin-vercel-ssr": "^0.2.0",
-    "vite-plugin-vercel": "^0.2.0"
+
   }
 }
