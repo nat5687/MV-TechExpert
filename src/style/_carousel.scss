@@ -60,7 +60,7 @@
 
 }
 .carousel-footer-item{
-    border: solid blue;
+    border: solid #0043A8;
     padding: 1em;
     border-radius: 60%;
 }
@@ -103,6 +103,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
+    z-index: 10;
     background: #ffffff url(../../svgs/right-arrow.svg) center center no-repeat;
     background-size: 20px 20px;
     border-radius: 50%;

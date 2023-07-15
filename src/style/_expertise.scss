@@ -10,10 +10,17 @@
     align-items: center;
     font-size: 1rem;
     width: 85%;
-    margin: 3rem;
+    margin: 0px;
+    margin-top: 3rem!important;
+    margin-bottom: 3rem!important;
+    background-color: rgb(248, 248, 248);
+    padding-left: 100%!important;
+    padding-right: 100%!important;
+    padding: 1rem;
 }
 .h1-expertise{
     font-size: 3rem;
+    margin: 1xem!important;
 }
 .main-expertise{
     display: flex;
@@ -61,7 +68,7 @@
 }
 
 .experience{
-    border: solid  rgb(91, 155, 213);
+    border: solid  #0043A8;
     border-radius: 30px
 }
 
@@ -69,7 +76,7 @@
     padding: 0.5em;
     padding-left: 3em;
     padding-right: 3em;
-    border: 0.5rem solid  rgb(91, 155, 213);
+    border: 0.5rem solid  #0043A8;
     border-radius: 1em
 }
 .img-projet{
@@ -82,3 +89,6 @@
 
 /* Carousel's behavior*/
 
+.experience-item{
+    margin: 1em;
+}

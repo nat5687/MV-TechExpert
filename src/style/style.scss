@@ -1,6 +1,16 @@
+*{
+    margin: 0px;
+}
+
+
+:root{
+    --couleur-principale: #0043A8;
+}
 html, body, header, main, footer{
     position: relative;
     overflow-x: hidden;
+    font-family: 'Barlow', sans-serif;
+
 }
 main{
     display: flex;
@@ -16,11 +26,32 @@ main{
 
 a{
     text-decoration: none;
-    color: black;
     font-size: 2rem;
+    font-weight: 600;
+    color: var(--couleur-principale);
     // margin: 2rem;
     // margin-right: 5rem;
     position: relative;
     // left: 10rem;
-    bottom: 1rem;
+}
+
+section{
+    margin: 2em;
+    margin-bottom: 4em;
+}
+
+.arrow-top{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 1rem;
+    background-color:var(--couleur-principale) ;
+    border-radius: 20%;
+    padding: 0.2rem;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.arrow-top-img{
+    height: 2.5rem;
 }

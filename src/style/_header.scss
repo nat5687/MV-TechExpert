@@ -1,13 +1,17 @@
-.MV-img{
-    margin-left: 4rem;
-}
-nav{
-    display: flex;
-    align-items: center;
-    
-}
+
 .navbar{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    padding: 0.5em;
+    z-index: -3;
+    border-bottom: solid #0043A8 1px;
+    align-items: center;
+    z-index: -10;
 }
+
+.fr-img{
+    width: 1.5em;
+    height: 1.5em;
+}
+

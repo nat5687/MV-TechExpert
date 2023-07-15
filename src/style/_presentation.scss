@@ -5,12 +5,27 @@
     font-size: 2rem;
     justify-content: space-evenly;
     flex-direction: column;
-
+    background:url('https://s2.qwant.com/thumbr/474x266/e/2/7612ad63b903a62abf0a69da5c2cb90b58c12e3ee850e0daaaa5bff7ad1ff6/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.kRJ2--PsnYE-yqwCCKqe3QHaEK%26pid%3DApi&q=0&b=1&p=0&a=0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px!important;
+    color: white;
+}
+.presentation-right{
+    font-weight: 600;
+    margin: 3em;
 }
 
-.presentation-item{
-    margin: 30px;
-}
 .presentation-left{
-    text-align: center;    
+    text-align: center;
+
+}
+
+.a:hover{
+    border-bottom: 3px solid rgb(91, 155, 213);
+    border-radius: 3px;
+}
+
+.presentation-left{
+    margin: 3em;
 }
