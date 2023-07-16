@@ -1,4 +1,7 @@
-
+header{
+    font-size: 0.7rem;
+    z-index: 10;
+}
 .navbar{
     display: flex;
     justify-content: space-evenly;
@@ -9,9 +12,27 @@
     align-items: center;
     z-index: -10;
 }
-
-.fr-img{
-    width: 1.5em;
-    height: 1.5em;
+.a:hover{
+    border-bottom: 3px solid rgb(91, 155, 213);
+}
+.img{
+    width: 1em;
 }
 
+.lang-wrappper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 9rem;
+}
+.img-fr{
+    width: 3.0em;
+}
+.img-en{
+    width: 1.5em;
+}
+.translate{
+    position: relative;
+    top: 0.1rem;
+}
+   

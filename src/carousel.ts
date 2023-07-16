@@ -119,6 +119,7 @@ export class Carousel {
         this.container.style.transform = `translate3D(${translateX}%, 0, 0)`
         this.currentItem = index
         this.moveCallBacks.forEach(cb => cb(index))
+        
     }
 
     onMove(cb: CallBack){

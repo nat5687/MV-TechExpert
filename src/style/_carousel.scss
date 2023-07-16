@@ -1,4 +1,4 @@
-.carousel-wrapper{
+ /* .carousel-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,12 +76,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} /*
 
 /* 
 
 */
-
+/* old carousel style */ 
 .carousel__item{
     float: left;
 }
@@ -126,3 +126,8 @@
 .carousel__prev--hidden, .carousel__next--hidden{
     display: none;
 }
+
+
+/*
+New carousel style
+*/
