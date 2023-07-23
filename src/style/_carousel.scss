@@ -131,3 +131,77 @@
 /*
 New carousel style
 */
+.img-carousel{
+    width: 3em;
+}
+.carousel-h1{
+    font-size: 3rem;
+}
+.carousel-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel-main{
+    display: flex;
+    margin: 3em;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+}
+.carousel-main-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 0px;
+}
+.carousel-main-main{
+    text-align: left;
+    padding : 0; margin : 0;
+}
+
+.carousel-main1 div {
+    width: 50%;
+}
+
+.carousel-main2 div {
+    width: calc(100%/3);
+}
+
+.carousel-main3 div {
+    width: calc(100%/4);
+}
+
+.carousel-main4 div {
+    width: calc(100%/4);
+}
+
+.carousel-main1 .carousel-main-item1 {
+    border-right: solid #0043A8 1px;
+}
+
+.carousel-main2 .carousel-main-item2 {
+    border-right: solid #0043A8 1px;
+    border-left: solid #0043A8 1px;
+}
+
+.carousel-main3 .carousel-main-item2 {
+    border-left: solid #0043A8 1px;
+}
+.carousel-main3 .carousel-main-item3 {
+    border-right: solid #0043A8 1px;
+    border-left: solid #0043A8 1px;
+}
+
+.carousel-main4 .carousel-main-item2 {
+    border-left: solid #0043A8 1px;
+}
+.carousel-main4 .carousel-main-item3 {
+    border-right: solid #0043A8 1px;
+    border-left: solid #0043A8 1px;
+}
+
+.carousel-main-header{
+    margin: 1em;
+}
