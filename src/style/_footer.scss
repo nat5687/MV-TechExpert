@@ -1,12 +1,9 @@
 footer{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
     color: white;
-    padding: 3rem;
-    padding-bottom: 0.5rem!important;
 }
 
 .linkedin-img{
@@ -18,7 +15,24 @@ footer{
 }
 
 .contact-him{
-    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     cursor: pointer;
+}
+
+
+.contact-him-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.adress{
+    color: white;
+    font-weight: 200;
+    font-size: 1.3rem!important;
+}
+
+.contact-me{
+    margin-right: 5em;
 }
 
