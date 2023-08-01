@@ -31,11 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
      toTop?.addEventListener('click', () => {
           if (document.documentElement.scrollTop > 0) {
                document.documentElement.scrollIntoView({ behavior: 'smooth' });
+               currentH1 = 1
            }
      })
 
      toTop.addEventListener('mouseenter' , () => {
-          console.log('test')
+
           imgToTop.classList.add('animate')
           setTimeout(() => {
                imgToTop.classList.remove('animate')
@@ -46,5 +47,99 @@ document.addEventListener('DOMContentLoaded', () => {
                imgToTop.classList.remove('animate-end')
                
           }, 800)
+
+          
+     })
+     // ____________________FORM______________________
+     const form = document.querySelector(".form")as HTMLFormElement
+     // const sendbutton  = document.gte
+     form.addEventListener('submit' , () => {
+
+          setTimeout(() => {
+
+               form?.reset()
+          }, 500)
+     })
+
+
+     // __________________ANIMATION___________________
+
+
+     const threshold = .35 
+     const options = { 
+        root: null,
+        rootMargin: '0px',
+        threshold 
+     }
+     
+     const animation = (entries: IntersectionObserverEntry[], observer : IntersectionObserver) => {
+     entries.forEach( entry => {
+        if(entry.intersectionRatio > threshold){
+           entry.target.classList.remove('reveal')
+           console.log(`${entry.target} visible`)
+           observer.unobserve(entry.target)
+           
+        }}
+     )}
+     
+     document.documentElement.classList.add('reveal-loaded')
+     const observer = new IntersectionObserver(animation, options)
+     const targets = document.querySelectorAll('.reveal').forEach( (target) => {
+     observer.observe(target)
+     })  
+
+
+     
+     // _____________LINK___________________________
+     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            
+            const target = document.querySelector(this.getAttribute('href'));
+            const offsetTop = 70 // Ajustez cette valeur en fonction de l'espacement souhaité entre le titre et le haut de la fenêtre du navigateur
+      
+            window.scroll({
+              top: target.offsetTop - offsetTop,
+              behavior: 'smooth'
+            })
+          })
+        })
+
+     //    ________________SCROLL_______________________
+
+     let currentH1= 1
+     const points: NodeListOf<HTMLElement>  = document.querySelectorAll('.h1')
+     const totalH1 = points.length
+     let scroll = document.documentElement.scrollTop
+
+     document.addEventListener("wheel", function(event) {
+          let delta = event.deltaY
+          const offset =  125
+          
+          if (delta > 0 && currentH1 < totalH1) {
+               currentH1++
+               console.log(`currentSection: ${currentH1}, delta: ${delta}`)
+               const relativeTop = points[currentH1 - 1].getBoundingClientRect().top
+               const positionX = relativeTop + document.documentElement.scrollTop
+               window.scrollTo({
+                    top: positionX - offset,
+                    behavior: 'smooth'
+               })
+               scroll = document.documentElement.scrollTop
+               event.preventDefault();
+
+
+          } else if (delta < 0 && currentH1 > 1 ) {
+               currentH1--
+               console.log(`currentSection: ${currentH1}, delta: ${delta}`)
+               const relativeTop = points[currentH1 - 1].getBoundingClientRect().top
+               const positionX = relativeTop + document.documentElement.scrollTop
+               window.scrollTo({
+                    top: positionX - offset,
+                    behavior: 'smooth'
+               })
+               scroll = document.documentElement.scrollTop
+               event.preventDefault();
+          }
      })
 })

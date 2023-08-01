@@ -82,22 +82,28 @@
 
 */
 /* old carousel style */ 
+
 .carousel__item{
     float: left;
 }
-
+.carousel-wrapper{
+    padding-bottom: 5rem;
+}
 .carousel__container{
     transition: transform 0.3s;
     transform: translate3d(0, 0, 0);
 }
+
 .carousel__container::after{
     content: '';
     clear: both;
     display: table;
 }
+
 .carousel{
     position: relative;
 }
+
 
 .carousel__next, .carousel__prev{
     position: absolute;
@@ -118,6 +124,7 @@
 .carousel__next:hover, .carousel__prev:hover{
     transform: scale(1.2);
 }
+
 .carousel__prev{
     right: auto;
     background-image: url(../../svgs/left-arrow.svg);
@@ -145,7 +152,7 @@ New carousel style
 .carousel-main{
     display: flex;
     margin: 3em;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     text-align: center;
 }
@@ -162,7 +169,7 @@ New carousel style
 }
 
 .carousel-main1 div {
-    width: 50%;
+    width: 35%;
 }
 
 .carousel-main2 div {
@@ -180,7 +187,6 @@ New carousel style
 .carousel-main1 .carousel-main-item1 {
     border-right: solid #0043A8 1px;
 }
-
 .carousel-main2 .carousel-main-item2 {
     border-right: solid #0043A8 1px;
     border-left: solid #0043A8 1px;

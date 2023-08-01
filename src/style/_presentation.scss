@@ -1,19 +1,41 @@
 
 .presentation-wrapper{
+    z-index: 2;
     display: flex;
     align-items: center;
     font-size: 2rem;
     justify-content: space-evenly;
     flex-direction: column;
-    background:url('https://s2.qwant.com/thumbr/474x217/f/1/3761cc0224f0473ce520d58241ca3cc140e68709294d17a1ce0cc4443e8b62/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.mB6UW0r-dIOX86Z24TH-VgHaDZ%26pid%3DApi&q=0&b=1&p=0&a=0');
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0px!important;
-    color: white;
+    background-color: rgb(248, 248, 248);
+
+
 }
+
+.bg {
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.6;
+
+}
+.overlay-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: black;
+}
+
+
+.presentation-item{
+    z-index: 10;
+}
+
 .presentation-right{
     font-weight: 600;
-    margin: 2em;
+    margin: 1em;
+    padding-top: 3em;
 }
 
 .presentation-left{

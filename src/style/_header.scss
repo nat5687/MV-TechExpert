@@ -1,15 +1,18 @@
+
 header{
     font-size: 0.7rem;
-    z-index: 10;
+    z-index: 1000;
     display: flex;
     width: 100%;
     padding: 0.5em;
     border-bottom: solid #0043A8 1px;
     align-items: center;
+    background-color: white;
+    position: fixed!important;
 }
 .navbar{
     margin-left: 5rem;
-    height: 5rem;
+    height: 4rem;
     width: 33rem;
     display: flex;
     justify-content: space-between;
@@ -40,7 +43,7 @@ header{
     top: 0.1rem;
 }
 .MV-img{
-    height: 5rem;
+    height: 4rem;
     margin-left: 5rem;
     border-right: 1px solid #0043A8;
     padding-right: 2rem;
