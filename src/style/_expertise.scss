@@ -16,19 +16,22 @@
     background-color: rgb(248, 248, 248);
     padding-left: 100%!important;
     padding-right: 100%!important;
-    padding: 3rem;
+    padding:    3rem;
 }
 .h1-expertise{
     font-size: 3rem;
     margin: 1rem!important;
 }
 .main-expertise{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    column-gap: 3vw;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 0.7fr 0.8fr; 
+
 }
 .experience{
-    width: 50%;
+    justify-self: center;
+    align-self: center;
 }
 .projet{
     display: flex;
@@ -38,14 +41,18 @@
     padding-right: 1em;
     color: white;
     border-radius: 0.5em;
+}
 
-    
+.projets{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
 }
 .projets > .projet{
     cursor: pointer;
 }
 .projets > .projet:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .projet1{
@@ -70,10 +77,10 @@
     background-color: rgb(80, 147, 248);
 }
 
-.experience{
+.expèrience-ul{
     border: solid  #0043A8;
     border-radius: 30px;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .header-expertise-item{
@@ -81,7 +88,12 @@
     padding-left: 3em;
     padding-right: 3em;
     border: 0.3rem solid  #0043A8;
-    border-radius: 1em
+    border-radius: 1em;
+    width: 25%;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.2rem;
+    text-align: center;
 }
 .img-projet{
     width: 4rem;
@@ -94,5 +106,6 @@
 /* Carousel's behavior*/
 
 .experience-item{
-    margin: 1em;
+    margin: 1vw;
 }
+

@@ -88,6 +88,7 @@
 }
 .carousel-wrapper{
     padding-bottom: 5rem;
+    overflow: hidden;
 }
 .carousel__container{
     transition: transform 0.3s;
@@ -107,8 +108,8 @@
 
 .carousel__next, .carousel__prev{
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     z-index: 10;
     background: #ffffff url(../../svgs/right-arrow.svg) center center no-repeat;
     background-size: 20px 20px;
@@ -143,6 +144,7 @@ New carousel style
 }
 .carousel-h1{
     font-size: 3rem;
+    text-align: center;
 }
 .carousel-item{
     display: flex;
@@ -160,7 +162,7 @@ New carousel style
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5%;
+    padding-bottom: 1rem;
     padding-top: 0px;
 }
 .carousel-main-main{
@@ -210,4 +212,5 @@ New carousel style
 
 .carousel-main-header{
     margin: 1em;
+    margin-top: 0!important;
 }

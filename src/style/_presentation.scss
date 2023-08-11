@@ -1,4 +1,9 @@
 
+
+.body {
+    width: 100%;
+    height: 100vh;
+}
 .presentation-wrapper{
     z-index: 2;
     display: flex;
@@ -8,6 +13,7 @@
     flex-direction: column;
     margin: 0px!important;
     background-color: rgb(248, 248, 248);
+    height: 100vh;
 
 
 }
@@ -16,7 +22,11 @@
     position: absolute;
     width: 100vw;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: center center;
+    top: 4.5rem;
+    height: calc(100vh - 4.5rem);
 
 }
 .overlay-text{
@@ -25,6 +35,8 @@
     align-items: center;
     position: relative;
     color: black;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 
@@ -32,11 +44,46 @@
     z-index: 10;
 }
 
-.presentation-right{
+.presentation-right {
     font-weight: 600;
     margin: 1em;
-    padding-top: 3em;
+    padding-top: 20vh;
+    display: inline-block;
 }
+
+.text-tapping {
+   /* border-right: 3px solid #0043A8; */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    /*animation:
+        typing 5s  infinite cubic-bezier(0,0,1,1) alternate,
+        cursor .4s step-end infinite alternate,
+        pausedAnimation 5s infinite; */
+}
+
+@keyframes typing {
+    0% {width: 0;}
+    40% {width: 100%;}
+
+}
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+
+
+/*.presentation-right::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4rem;
+    width: 45rem;
+    background-image:url(/public/img/bg.webp);
+    border-left: 2px solid #0043A8;
+    animation: typing 8s steps(40) infinite alternate;
+}*/
+
 
 .presentation-left{
     text-align: center;
@@ -46,4 +93,5 @@
 
 .presentation-left{
     margin: 3em;
+    width: 90%;
 }

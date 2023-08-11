@@ -7,14 +7,9 @@ footer{
     align-items: center;
     background-color: black;
     color: white;
-    padding: 5rem;
+    padding: 2rem;
 }
 
-.bx-envelope {
-    width: 5rem;
-    height: 5rem;
-    color: white;
-}
 
 .linkedin-img{
     width: 2.5rem;
@@ -31,10 +26,7 @@ footer{
 }
 
 
-.contact-him-wrapper{
-    display: flex;
-    align-items: center;
-}
+
 
 .adress{
     color: white;
@@ -45,4 +37,31 @@ footer{
 .contact-me{
     margin-right: 5em;
 }
+
+
+
+.contact-him-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.contact-him-wrapper div{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.contact-him-wrapper div img{
+    padding: 0.3rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-right: 2rem;
+    transition: .3s;
+
+}
+
 

@@ -23,8 +23,8 @@ main{
 @import url(_realisation.scss);
 @import url(_contact.scss);
 @import url(_footer.scss);
-
-a{
+@import url(_responsive.scss);
+.a{
     text-decoration: none;
     font-size: 1.7rem;
     font-weight: 600;

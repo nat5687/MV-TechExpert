@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="./public/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,29 +13,51 @@
   </head>
   <body>
     <header id="header">
-          <img src="/img/imageonline-co-transparentimage.png" alt="the logo of the company" class="MV-img">
-          <div class="navbar">
-            <a class="a" href="#expertise">
-              Expertise
-            </a>
-            <a class="a" href="#realisation">
-              Réalisations
-            </a>
-            <a class="a" href="#contact">
-              Contact
-            </a>
+      <div class="header-nav">
+        <img src="/img/imageonline-co-transparentimage.png" alt="the logo of the company" class="MV-img">
+          <div class="nav-wrapper">
+            <div class="navbar">
+              <a class="a Expertise" href="#expertise">
+                Expertise
+              </a>
+              <a class="a Realisations" href="#realisation">
+                Réalisations
+              </a>
+              <a class="a Contact" href="#contact">
+                Contact
+              </a>
+            </div>
+            <div class="lang-wrappper">
+                <img src="/svgs/france.svg" alt="" class="img img-fr">
+              <a href="./index copy.html" class="translate">
+                <img src="/img/translate.png" alt="" class="img img-lang">
+              </a>
+                <img src="/img/royaume-uni-flag.png" alt="" class="img img-en">
+            </div>
           </div>
-          
-          <div class="lang-wrappper">
+          <span class="menu-wrapper"><img class="burger opened" src="public/svgs/menu.svg" alt=""></span>
+      </div>
+
+          <div class="big-menu hidden responsive-menu">
+            <div class="main">
+              <ul class="responsive-nav-wrapper">
+                <li><a class=" Expertise" href="#expertise">Expertise</a></li>
+                <li><a class=" Realisations" href="#realisation">Réalisations</a></li>
+                <li><a class=" Contact" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer"><div class="lang-wrappper">
               <img src="/svgs/france.svg" alt="" class="img img-fr">
             <a href="./index copy.html" class="translate">
               <img src="/img/translate.png" alt="" class="img img-lang">
             </a>
               <img src="/img/royaume-uni-flag.png" alt="" class="img img-en">
+          </div></div>
           </div>
     </header>
+    
     <main id="main">
-      <section class="presentation-wrapper reveal" id="presentation">
+      <section class="presentation-wrapper " id="presentation">
         <!-- <div class="presentation-item column">
           <p class="presentation titre">Mathieu Vilotte</p>
           <div class="presentation contact">
@@ -46,9 +68,11 @@
         </div> -->
         <img src="/img/bg.webp" alt="" class="bg">
         <div class="overlay-text">
-          <h1 class="presentation-item presentation-right reveal-1 h1">
-            Conseil en ingénierie industrielle
-          </h1>
+          <div class="presentation-item presentation-right reveal-1 h1">
+            <h1 class="text-tapping">
+              Conseil en ingénierie industrielle
+            </h1>
+          </div>
           <div class="presentation-item presentation-left reveal-2">20 ans d’expérience dans le domaine de la
             mécanique : industrie, aéronautique et
             spatial, médical et ferroviaire.
@@ -62,12 +86,11 @@
       </section>
       <section class="expertise-wrapper reveal" id="expertise">
         <h1 class="h1-expertise reveal-1 h1" id="h1-expertise">Expertise</h1>
-          <div class="header-expertise">
+          <div class="main-expertise">
             <p class="header-expertise-item reveal-2">Vos projets</p>
             <p class="header-expertise-item reveal-2">Mon expertise</p>
-          </div>
-          <div class="main-expertise">
             <div class="projets reveal-3" >
+
               <div class="projet projet1">
                 <img src="/img/Développement et optimisation industrielle.png" alt="" class="img-projet">
                 <p>Développement et Optimisation Industrielle</p>
@@ -520,13 +543,21 @@
     </main>
     <footer id="footer">
       <div class="contact-him-wrapper">
-        <i class='bx bx-envelope' style='color:#ffffff'  ></i>
-        <a class="contact-him" href="https://fr.linkedin.com/company/mvtechexpert" target="_blank">
+        <div class="mail">
+          <img src="public/svgs/mail.png" alt="">
+          <p>contact@mvtechexpert.fr</p>
+        </div>
+        <div class="phone">
+          <img src="public/svgs/smartphone-call.png" alt="">
+          <p>06-71-59-47-67</p>
+        </div>
+        <div class="localisation">
+          <img src="/public/svgs/location.png" alt="">
+          <p>Toulouse , Occitanie</p>
+        </div>
+        <!-- <a class="contact-him" href="https://fr.linkedin.com/company/mvtechexpert" target="_blank">
           <img src="/public/svgs/linkedin.png" alt="" class="linkedin-img">
-        </a>
-        <a class="adress" href="https://www.google.fr/maps/place/MV-TechExpert/@43.7821389,1.4024411,17z/data=!3m1!4b1!4m6!3m5!1s0x12aea74cf7b3ab4d:0xb00b155cb0d2ca56!8m2!3d43.7821351!4d1.405016!16s%2Fg%2F11rptdnvf0?entry=ttu" target="_blank" rel="noopener noreferrer">
-          <p >59 Rue Jean Jaurès, 31620 Bouloc - France</p>
-        </a>
+        </a> -->
       </div>
       <div class="contactme">
         <p class="contact-item">Site internet créé par Nathan Bassanetti</p>
